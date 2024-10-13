@@ -1,13 +1,10 @@
 :root {
   --primary-color: #2D2155;
-  /* Header and footer */
   --white-color: white;
-  /* Text in headers, footers, and buttons */
   --button-color: #6D40E4;
   --hover-color: #3d2482;
-  /* On-click for buttons and text hover */
   --background-color: #e0f7fa; 
-  /* Light background */
+  --footer-color: #2c3e50;
 }
 
 /* General Styles */
@@ -117,24 +114,103 @@ main .hero {
 }
 
 /* Footer Section */
-footer {
+/* footer {
   background-color: var(--primary-color);
-  /* Footer using primary color */
   color: var(--white-color);
-  /* Text color using white color */
   text-align: center;
   padding: 20px 0;
 }
 
 footer a {
   color: var(--white-color);
-  /* Link text color */
   text-decoration: none;
   font-weight: bold;
 }
 
 footer a:hover {
   text-decoration: underline;
+} */
+
+/* Footer Styles */
+.footer {
+  background-color: var(--footer-color); /* Dark background */
+  color: #ecf0f1; /* Light text color */
+  padding: 40px 20px; /* Padding for the footer */
+  font-family: 'Arial', sans-serif; /* Font family */
+}
+
+.footer-container {
+  display: flex; /* Flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: space-between; /* Space between sections */
+}
+
+.footer-section {
+  flex: 1; /* Equal flex for each section */
+  margin: 10px; /* Margin around each section */
+  min-width: 200px; /* Minimum width for responsiveness */
+}
+
+.footer-section h3 {
+  color: #e74c3c; /* Heading color */
+  margin-bottom: 10px; /* Space below headings */
+}
+
+.footer-section p {
+  margin: 5px 0; /* Margin for paragraphs */
+}
+
+.footer-section ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+.footer-section ul li {
+  margin: 5px 0; /* Space between list items */
+}
+
+.footer-section ul li a {
+  color: #ecf0f1; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.social-icons {
+  display: flex; /* Flexbox for social icons */
+}
+
+.social-icons a {
+  margin: 0 10px; /* Margin between icons */
+}
+
+.social-icons img {
+  width: 30px; /* Icon width */
+  height: 30px; /* Icon height */
+}
+
+.footer-bottom {
+  text-align: center; /* Center text */
+  margin-top: 20px; /* Space above the copyright text */
+  font-size: 14px; /* Font size for copyright */
+}
+
+.social-icons {
+  display: flex; /* Flexbox for social icons */
+}
+
+.social-icons a {
+  margin: 0 10px; /* Margin between icons */
+  color: #ecf0f1; /* Icon color */
+  font-size: 24px; /* Font size for icons */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Transition effect on hover */
+}
+
+.social-icons a:hover {
+  color: #e74c3c; /* Change color on hover */
 }
 
 /* services page --> Table */
@@ -420,89 +496,83 @@ textarea {
     margin-bottom: 15px; /* Space below the title */
     color: #e0f7fa;; /* Dark text color */
 }
-
-.about {
-  padding: 80px 0px;
-  background-color: #ffffff;
-  background-image: url('./images/wwoBg.png');
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
+/* Card section */
+.card-section {
+  background-color: var(--hover-color);
+  padding: 40px;
 }
-
-.about .content {
+.previous-events h2, .card-section h1{
+  font-size: 2.5rem; /* Font size for the title */
+  margin-bottom: 15px; /* Space below the title */
+  color: #e0f7fa;; /* Dark text color */
+  text-align: center;
+}
+/* Card Container */
+.card-container {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.about .section-title {
-  font-size: 3.5rem;
-  color: #000000;
-  margin-bottom: 30px;
-  justify-content: center;
+/* Card Styles */
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: calc(33.333% - 20px); /* 3 cards per row with space between */
+  max-width: 100%;
   text-align: center;
+  
 }
 
-.about .content {
-  -webkit-display: flex;
-  display: flex;
+.card:hover {
+  transform: scale(1.05);
 }
 
-.about .content .box {
-  flex: 0 0 auto;
-  /* Adjust box width to fit available space */
-  max-width: 50%;
-  padding: 20px;
-  /* Reduce padding for smaller screens */
-}
-
-@media (min-width: 1050px) {
-  .about .content .box {
-    flex: 0 0 20%;
-    /* Set a fixed width for larger screens */
-  }
-}
-
-.about .content .box .inner {
-  background-color: #3d2482;
-}
-
-.about .content .box .inner .img img {
+.card-img {
   width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
-@media (min-width: 768px) {
-  .about .content .box .inner .img img {
-    padding: auto;
-    width: auto;
-    height: auto;
+.card-content {
+  padding: 25px;
+}
+
+.card-content h3 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.card-content p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .card {
+      width: calc(50% - 20px); /* 2 cards per row on medium screens */
   }
 }
 
-.about .content .box .inner .text {
-  padding: 30px;
+@media (max-width: 768px) {
+  .card {
+      width: 100%; /* Cards stacked vertically on small screens */
+  }
+
+  .card-container {
+      flex-direction: column;
+      align-items: center;
+  }
 }
 
-.about .content .box .inner .text h4 {
-  font-size: 20px;
-  margin: 0;
-  padding: 0px 0px 15px;
-  font-weight: 500;
-  color: #ffffff;
-  text-transform: capitalize;
-  text-align: center;
-}
-
-.about .content .box .inner .text p {
-  font-size: 15px;
-  line-height: 20px;
-  color: #ffffff;
-  text-align: center;
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-}
 
 .pool-section {
   display: flex;
@@ -533,68 +603,13 @@ textarea {
   border-radius: 20px;
   margin-left: 200px;
 }
-
-/* About Info Section */
-.about-info {
-  background-color: #3d2482;
-  /* Dark background to match theme */
-  color: #fff;
-  padding: 60px 0;
+/* History section */
+.history h2{
+  font-size: 2.5rem; /* Font size for the title */
+  margin-bottom: 15px; /* Space below the title */
+  color: var(--hover-color); /* Dark text color */
   text-align: center;
 }
-
-.box:hover {
-  transform: scale(1.05);
-  /* Scale up slightly on hover */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  /* Add shadow effect on hover */
-}
-
-/* Hover effect for images */
-.box:hover .img img {
-  filter: brightness(0.9);
-  /* Slightly darken the image on hover */
-  transition: filter 0.5s ease;
-  /* Smooth transition for image effect */
-}
-
-.info-container {
-  display: flex;
-  background-color: #3d2482;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.info-card {
-  background: #e0f7fa;
-  border-radius: 10px;
-  padding: 20px;
-  width: 30%;
-  min-width: 250px;
-  margin: 20px 10px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-.info-card:hover {
-  transform: translateY(-10px);
-}
-
-
-.info-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #000000;
-}
-
-.info-text {
-  font-size: 1.1rem;
-  color: #292929;
-}
-
 .our-history,
 .big-events,
 .trainer-spotlight {
@@ -628,13 +643,17 @@ textarea {
 .trainer-info {
   padding: 10px;
   text-align: center;
+  font-size: 1.3rem;
+  font-family: 'Times New Roman', Times, serif;
 }
+
 
 .previous-events {
   padding: 50px 0;
-  background-color: #f9f9f9;
+  background-color: var(--hover-color);
   /* Light background for contrast */
 }
+
 
 /* FAQ Section Styles */
 /* FAQ Section Styles */
@@ -644,6 +663,9 @@ textarea {
   padding: 50px 20px;
   border-radius: 5px;
   margin: 0px 0;
+}
+.faq h1{
+  text-align: center;
 }
 
 .faq-container {
@@ -777,131 +799,65 @@ textarea {
 }
 
 /* Trainer Intro Section */
-.trainer-intro {
-  background-color: #f0f0f0;
-  /* Light background for contrast */
-  color: #333;
-  padding: 60px 0;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  /* Change font for a modern look */
+/* Trainer Intro Section */
+.trainer h1 {
+  font-size: 2.5rem; /* Font size for the title */
+  margin-bottom: 15px; /* Space below the title */
+  color: var(--hover-color); /* Dark text color */
+  text-align: center; 
 }
 
-.trainers-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  border-radius: 15px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  /* Adding shadow for depth */
-  background-color: white;
-  /* White background for the content */
-  padding: 40px;
+.trainer {
+  padding: 20px; /* Add padding around the section */
+  text-align: center; /* Center align text */
+}
+
+.trainer-container {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping to the next line */
+  justify-content: space-around; /* Space out the cards */
+}
+
+.trainer-card {
+  background-color: #f9f9f9; /* Light background for cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  margin: 15px; /* Space between cards */
+  padding: 20px; /* Padding inside the card */
+  width: 300px; /* Fixed width for cards */
 }
 
 .trainer-img img {
-  border-radius: 10px;
-  width: 100%;
-  max-width: 350px;
-  /* Set a maximum width for the image */
-  height: auto;
-  /* Maintain aspect ratio */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Make image responsive */
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensure image covers the area */
+  border-radius: 10px; /* Match the card corners */
 }
 
-.trainer-info {
-  padding: 20px;
-  flex: 1;
+.section-title {
+  margin: 15px 0; /* Space above and below titles */
+  font-size: 1.5em; /* Title font size */
+  color: #333; /* Title color */
 }
 
-.trainers {
-  padding: 50px 20px;
-  background-color: #f9f9f9;
-  /* Light background for contrast */
-  text-align: center;
+.trainer-card p {
+  color: #555; /* Description color */
+  line-height: 1.6; /* Space out lines for readability */
 }
-
-.trainer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.details-btn{
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 15px;
 }
-
-.trainer-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  width: 300px;
-  /* Width of each card */
-  overflow: hidden;
-  transition: transform 0.2s;
-}
-
-.trainer-card:hover {
+.details-btn:hover {
+  background-color: var(--hover-color);
   transform: scale(1.05);
-  /* Zoom effect on hover */
-}
-
-.trainer-image img {
-  width: 100%;
-  height: 200px;
-  /* Fixed height for images */
-  object-fit: cover;
-}
-
-.trainer-info {
-  padding: 15px;
-}
-
-.trainer-specialty {
-  font-weight: bold;
-  color: #555;
-  /* Slightly lighter color for specialty */
-}
-
-.trainers {
-  padding: 50px 20px;
-  background-color: #f9f9f9;
-  /* Light background for contrast */
-  text-align: center;
-}
-
-.trainer-container {
-  display: flex;
-  flex-direction: column;
-  /* Stack trainer cards vertically */
-  align-items: center;
-  /* Center align cards */
-}
-
-.trainer-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  padding: 20px;
-  /* Padding for text */
-  width: 80%;
-  /* Width of each card */
-  max-width: 400px;
-  /* Maximum width for cards */
-  transition: transform 0.2s;
-}
-
-.trainer-card:hover {
-  transform: scale(1.05);
-  /* Zoom effect on hover */
-}
-
-.trainer-specialty {
-  font-weight: bold;
-  color: #555;
-  /* Slightly lighter color for specialty */
-  margin: 10px 0;
-  /* Margin for spacing */
 }
 
 @media (max-width: 768px) {
@@ -919,6 +875,17 @@ textarea {
   .trainer-info {
     text-align: center;
   }
+}
+
+.about-info{
+  /* max-width: 800px;  */
+  margin: 20px auto; 
+  padding: 20px; 
+  background-color: #3d2482;  
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); 
+  text-align: center; 
+  color: #e0f7fa;
 }
 
 .events-container {
@@ -949,11 +916,6 @@ textarea {
   /* Rounded top corners */
 }
 
-
-.section-title {
-  text-align: center;
-  margin-bottom: 20px;
-}
 
 .events-list {
   list-style: none;
@@ -1034,3 +996,5 @@ textarea {
   text-align: center;
   margin-bottom: 30px;
 }
+
+
