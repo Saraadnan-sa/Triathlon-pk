@@ -113,23 +113,6 @@ main .hero {
   transition-duration: 0.3s;
 }
 
-/* Footer Section */
-/* footer {
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  text-align: center;
-  padding: 20px 0;
-}
-
-footer a {
-  color: var(--white-color);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer a:hover {
-  text-decoration: underline;
-} */
 
 /* Footer Styles */
 .footer {
@@ -632,11 +615,9 @@ textarea {
   padding: 20px;
   margin: 20px 0;
 }
-.trainer-img {
-  /* height: 300px */
-  /* overflow: hidden;       */
-}
-
+/* .trainer-img {
+ 
+} */
 .trainer-img img {
   width: 100%;           
   height: auto;         
