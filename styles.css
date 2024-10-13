@@ -632,12 +632,18 @@ textarea {
   padding: 20px;
   margin: 20px 0;
 }
-
-
 .trainer-img {
-  text-align: center;
-  border-radius: 20px;
+  /* height: 300px */
+  /* overflow: hidden;       */
 }
+
+.trainer-img img {
+  width: 100%;           
+  height: auto;         
+  object-fit: cover;     
+  object-position: top;  
+}
+
 
 .history-text,
 .trainer-info {
