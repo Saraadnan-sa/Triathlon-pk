@@ -996,5 +996,229 @@ textarea {
   text-align: center;
   margin-bottom: 30px;
 }
+/* Reuse styles from the About page */
 
+/* Header */
+.navbar {
+  background-color: #2b0a4b;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  color: #ffcd00;
+}
+
+/* Hero section */
+.about-hero {
+  background-color: #3e1f70; /* Purple background */
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+}
+
+.about-hero .hero-text {
+  background-color: #43147c; /* Slightly darker purple card */
+  padding: 20px;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+}
+
+/* Blog content */
+.blog-content {
+  background-color: #e7f9fc; /* Light blue background */
+  padding: 50px 0;
+}
+
+.blog-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.blog-card {
+  background-color: #43147c; /* Same purple as the About page cards */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.blog-card h2 {
+  margin: 15px 0;
+  font-size: 1.8rem;
+}
+
+.blog-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.blog-card a {
+  color: #ffcd00;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.blog-card a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #2b0a4b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+/* Blog content */
+.blog-card {
+  background-color: #43147c; /* Same purple as the About page cards */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.blog-card h2 {
+  margin: 15px 0;
+  font-size: 1.8rem;
+}
+
+.blog-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.blog-card a {
+  color: #ffcd00;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.blog-card a:hover {
+  text-decoration: underline;
+}
+
+/* Hover effect for the cards */
+.blog-card:hover {
+  transform: translateY(-10px); /* Slightly lifts the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhances the shadow */
+}
+/* Comment Section */
+#comment-section {
+  background-image: url('images/service1.jpg'); /* Path to your background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  padding: 40px 20px;
+  margin-top: 50px;
+  border-radius: 8px;
+  color: white; /* Change text color to improve readability on a background image */
+  position: relative; /* Positioning context for the overlay */
+}
+
+#comment-section h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+}
+
+.comment-container {
+  max-width: 600px;
+  margin: 0 auto; /* Center the comment container */
+  background: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+  padding: 20px; /* Padding for the inner container */
+  border-radius: 8px; /* Round the corners of the inner container */
+}
+
+.comment-item {
+  margin-bottom: 20px;
+}
+
+.comment-label {
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.comment-input,
+.comment-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.comment-input:focus,
+.comment-textarea:focus {
+  border-color: #43147c;
+  outline: none;
+}
+
+.comment-textarea {
+  resize: vertical; /* Allow vertical resizing */
+  height: 100px; /* Set a default height */
+}
+
+.comment-button {
+  background-color: #43147c;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-button:hover {
+  background-color: #4a1494;
+}
 
