@@ -22,7 +22,8 @@
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="blog.html">Blogs</a></li> 
+        <li><a id="toggleTheme" onclick="toggleTheme()">Switch to Red Theme</a></li>
       </ul>
     </div>
   </header>
@@ -46,9 +47,15 @@
         <img src="images/pool.png" alt="Card Image 1" class="card-img">
         <div class="card-content">
           <h3>Swimming Facilities</h3>
-          <p>Our sports center offers a state-of-the-art Olympic-sized pool,
-            a kiddie pool, and modern amenities for swimmers of all ages.
-            Enjoy a clean, safe, and enjoyable swimming experience.</p>
+          <p>
+            For over 30 years, Triathlon PK has been committed to providing
+        personalized  
+            <span id="extra1" class="extra-details" style="display: none;">fitness training designed to build self-confidence,
+              health, and personal fulfillment.</span>
+          </p>
+            <button class="details-btn button" onclick="toggleDetails('extra1', this)">
+            <i class="fas fa-info-circle"></i> Learn More
+        </button>
         </div>
       </div>
 
@@ -56,12 +63,15 @@
         <img src="images/workspace.jpg" alt="Card Image 2" class="card-img">
         <div class="card-content">
           <h3>Weight Training Area</h3>
-          <p>A weight training area equipped with bench press, squat rack,
-            free weights, and leg press is a designated space for
-            individuals to engage in strength training exercises. These
-            machines and equipment allow for various muscle groups to be
-            targeted and effectively worked, promoting overall physical
-            fitness and strength development.</p>
+          <p>
+            Our sports center offers a state-of-the-art Olympic-sized pool,
+            a kiddie pool
+            <span id="extra2" class="extra-details" style="display: none;">and modern amenities for swimmers of all ages.
+              Enjoy a clean, safe, and enjoyable swimming experience.</span>
+          </p>
+            <button class="details-btn button" onclick="toggleDetails('extra2', this)">
+            <i class="fas fa-info-circle"></i> Learn More
+        </button>
         </div>
       </div>
 
@@ -69,10 +79,16 @@
         <img src="images/floor.png" alt="Card Image 3" class="card-img">
         <div class="card-content">
           <h3>Special Floor & Yoga Facility</h3>
-          <p>Spacious sports floor equipped with specialized flooring
-            designed to provide optimal traction and shock absorption for
-            various athletic activities. In addition to the sports floor,
-            the facility offers a fully equipped yoga and Pilates studio.</p>
+           <p>
+            Spacious sports floor equipped with specialized flooring
+            designed to provide 
+            <span id="extra3" class="extra-details" style="display: none;">optimal traction and shock absorption for
+              various athletic activities. In addition to the sports floor,
+              the facility offers a fully equipped yoga and Pilates studio.</span>
+          </p>
+            <button class="details-btn button" onclick="toggleDetails('extra3', this)">
+            <i class="fas fa-info-circle"></i> Learn More
+        </button>
         </div>
       </div>
     </div>
@@ -157,11 +173,13 @@
           </div>
           <h2 class="section-title"> Hania Malik</h2>
           <p>
-           A senior professional trainer with over 15 years of experience in the fitness industry, Hania specializes in strength training and nutrition coaching. She believes that every individual has the potential to excel and strives to create a supportive and motivating environment.
+            A senior professional trainer with over 15 years of experience in the fitness industry. 
+            <span id="extra4" class="extra-details" style="display: none;">Hania specializes in strength training and nutrition coaching, creating a supportive and motivating environment for individuals to excel.</span>
           </p>
-          <button class="details-btn">
+            <button class="details-btn button" onclick="toggleDetails('extra4', this)">
             <i class="fas fa-info-circle"></i> Learn More
         </button>
+        
       </div>
 
       <div class="trainer-card">
@@ -170,10 +188,11 @@
           </div>
           <h2 class="section-title">Faraz Khan</h2>
           <p>
-              A dedicated professional trainer known for his innovative approach to wellness and fitness. With a focus on personalized programs, he empowers clients to achieve their health goals through motivation and expertise.
+            A dedicated professional trainer known for his innovative approach to wellness and fitness. 
+            <span id="extra5" class="extra-details" style="display: none;">With a focus on personalized programs, he empowers clients to achieve their health goals through motivation and expertise.</span>
           </p>
-        <button class="details-btn">
-            <i class="fas fa-info-circle"></i> Learn More
+          <button class="details-btn button" onclick="toggleDetails('extra5', this)">
+          <i class="fas fa-info-circle"></i> Learn More
         </button>
       </div>
 
@@ -183,9 +202,10 @@
           </div>
           <h2 class="section-title">Nida Ali</h2>
           <p>
-              With over 10 years of experience in the fitness industry, Nida specializes in strength training and nutrition coaching. Her passion for fitness is matched only by her dedication to helping others achieve their goals.
+            With over 10 years of experience, Nida specializes in strength training and nutrition coaching. 
+            <span id="extra6" class="extra-details" style="display: none;">Her passion for fitness is matched only by her dedication to helping others achieve their goals.</span>
           </p>
-          <button class="details-btn">
+          <button class="details-btn button" onclick="toggleDetails('extra6', this)">
             <i class="fas fa-info-circle"></i> Learn More
         </button>
       </div>
@@ -223,7 +243,7 @@
       </div>
     </div>
   </section>
-  <!-- FAQ Section -->
+
   <!-- FAQ Section -->
   <section class="faq">
     <h1 >Frequently Asked Questions</h1>
@@ -302,6 +322,7 @@
         <p>&copy; 2024 Fitness Studio. All Rights Reserved.</p>
     </div>
   </footer>
+  <script src="script.js"></script>
 
 </body>
 

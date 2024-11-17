@@ -1,187 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Triathlon PK</title>
-    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  </head>
-  <body>
-    <!-- Header Section -->
-    <header>
-      <div class="navbar">
-        <div class="logo">
-          <img src="./images/logo.png" alt="Gym Logo">
-        </div>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="blog.html">Blogs</a></li>
-        </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triathlon PK - Services</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="./images/logo.png" alt="Gym Logo">
       </div>
-    </header>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a id="toggleTheme" onclick="toggleTheme()">Switch to Red Theme</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <main>
-      <section class="services">
-        <h1>Our Services</h1>
-        <p>
-          Explore the different fitness programs we offer at Triathlon PK. Our
-          expert trainers are dedicated to helping you achieve your fitness
-          goals through personalized and engaging training sessions.
-        </p>
-        <table>
-          <thead>
-            <tr>
-              <th>Service</th>
-              <th>Details</th>
-              <th>Price</th>
-              <th>Sign Up</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Boot Camp Fitness</td>
-              <td>
-                High-intensity group fitness classes designed to build strength
-                and endurance.
-              </td>
-              <td>PKR 5,000/month</td>
-              <td><a href="home.html" class="join-now-btn">Join Now</a></td>
-            </tr>
-            <tr>
-              <td>Personal Training</td>
-              <td>
-                One-on-one training with a certified trainer, tailored to your
-                individual fitness level and goals.
-              </td>
-              <td>PKR 7,000/month</td>
-              <td><a href="home.html" class="join-now-btn">Join Now</a></td>
-            </tr>
-            <tr>
-              <td>Sports Training</td>
-              <td>
-                Specialized training programs for cycling, running, and
-                triathlon events to enhance performance.
-              </td>
-              <td>PKR 6,500/month</td>
-              <td><a href="home.html" class="join-now-btn">Join Now</a></td>
-            </tr>
-            <tr>
-              <td>Weight Training Sessions</td>
-              <td>
-                Focused sessions using the weight training area (bench press,
-                squat rack, free weights, leg press) to build strength and
-                conditioning.
-              </td>
-              <td>PKR 6,000/month</td>
-              <td><a href="home.html" class="join-now-btn">Join Now</a></td>
-            </tr>
-            <tr>
-              <td>Yoga and Pilates Classes</td>
-              <td>
-                Relaxation and core strengthening sessions with professional
-                instructors using the studio’s yoga and Pilates equipment.
-              </td>
-              <td>PKR 9,000/month</td>
-              <td><a href="home.html" class="join-now-btn">Join Now</a></td>
-            </tr>
-            <tr>
-              <td>Endless Pool Training</td>
-              <td>
-                Swim training using the endless pool, ideal for triathletes or
-                anyone looking to improve swimming technique.
-              </td>
-              <td>PKR 6,500/month</td>
-              <td><a href="home.html" class="join-now-btn">Join Now</a></td>
-            </tr>
-            <tr>
-              <td>Competition Preparation & Results Tracking</td>
-              <td>
-                Support for athletes preparing for events, and tools to track
-                and analyze competition results.
-              </td>
-              <td>PKR 10,000/month</td>
-              <td><a href="home.html" class="join-now-btn">Join Now</a></td>
-            </tr>
-            <tr>
-              <td>Health and Wellness Counseling</td>
-              <td>
-                Guidance on health, nutrition, and wellness, to support overall
-                fitness goals.
-              </td>
-              <td>PKR 8,500/month</td>
-              <td><a href="home.html" class="join-now-btn">Join Now</a></td>
-            </tr>
-          </tbody>
-        </table>
+  <main>
+    <section class="services">
+      <h1>Our Services</h1>
+      <p>Explore the different fitness programs we offer at Triathlon PK. Our expert trainers are dedicated to helping
+        you achieve your fitness goals through personalized and engaging training sessions.</p>
 
-        <div class="testimonials">
-          <h2>Testimonials</h2>
-          <p>
-            “The personal training sessions have transformed my fitness
-            journey!” - Sarah K.
-          </p>
-          <p>
-            “I love the Boot Camp classes! They’re challenging yet so much fun.”
-            - John D.
-          </p>
-        </div>
+      <!-- Table to display services -->
+      <table id="servicesTable">
 
-        <div class="faq">
-          <h2>FAQs</h2>
-          <p>
-            <strong>What should I bring to my first class?</strong><br />Just
-            wear comfortable workout clothes and bring water!
-          </p>
-          <p>
-            <strong>Are there any prerequisites for joining?</strong><br />No,
-            all fitness levels are welcome!
-          </p>
-        </div>
-      </section>
-    </main>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Details</th>
+            <th>Price</th>
+            <th>Sign Up</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Boot Camp Fitness</td>
+            <td>
+              High-intensity group fitness classes designed to build strength
+              and endurance.
+            </td>
+            <td>PKR 5,000/month</td>
+            <td><a href="home.html" class="join-now-btn">Join Now</a></td>
+          </tr>
+          <tr>
+            <td>Personal Training</td>
+            <td>
+              One-on-one training with a certified trainer, tailored to your
+              individual fitness level and goals.
+            </td>
+            <td>PKR 7,000/month</td>
+            <td><a href="home.html" class="join-now-btn">Join Now</a></td>
+          </tr>
+          <tr>
+            <td>Sports Training</td>
+            <td>
+              Specialized training programs for cycling, running, and
+              triathlon events to enhance performance.
+            </td>
+            <td>PKR 6,500/month</td>
+            <td><a href="home.html" class="join-now-btn">Join Now</a></td>
+          </tr>
+          <tr>
+            <td>Weight Training Sessions</td>
+            <td>
+              Focused sessions using the weight training area (bench press,
+              squat rack, free weights, leg press) to build strength and
+              conditioning.
+            </td>
+            <td>PKR 6,000/month</td>
+            <td><a href="home.html" class="join-now-btn">Join Now</a></td>
+          </tr>
+          <tr>
+            <td>Yoga and Pilates Classes</td>
+            <td>
+              Relaxation and core strengthening sessions with professional
+              instructors using the studio’s yoga and Pilates equipment.
+            </td>
+            <td>PKR 9,000/month</td>
+            <td><a href="home.html" class="join-now-btn">Join Now</a></td>
+          </tr>
+          <tr>
+            <td>Endless Pool Training</td>
+            <td>
+              Swim training using the endless pool, ideal for triathletes or
+              anyone looking to improve swimming technique.
+            </td>
+            <td>PKR 6,500/month</td>
+            <td><a href="home.html" class="join-now-btn">Join Now</a></td>
+          </tr>
+          <tr>
+            <td>Competition Preparation & Results Tracking</td>
+            <td>
+              Support for athletes preparing for events, and tools to track
+              and analyze competition results.
+            </td>
+            <td>PKR 10,000/month</td>
+            <td><a href="home.html" class="join-now-btn">Join Now</a></td>
+          </tr>
+          <tr>
+            <td>Health and Wellness Counseling</td>
+            <td>
+              Guidance on health, nutrition, and wellness, to support overall
+              fitness goals.
+            </td>
+            <td>PKR 8,500/month</td>
+            <td><a href="home.html" class="join-now-btn">Join Now</a></td>
+          </tr>
+        </tbody>
+      </table>
 
 
-  <!-- Footer Section -->
+      <!-- Buttons to Add and Remove Items -->
+      <button id="addItemButton">Add New Item</button>
+      <button id="removeItemButton">Remove Last Item</button>
+
+      <script>
+        // Load table data from localStorage on page load
+        document.addEventListener("DOMContentLoaded", function () {
+          loadTableData();
+        });
+
+        // Function to load table data from localStorage
+        function loadTableData() {
+          const table = document.getElementById("servicesTable").getElementsByTagName("tbody")[0];
+          const services = JSON.parse(localStorage.getItem("servicesList")) || [];
+
+          services.forEach(service => {
+            const newRow = table.insertRow();
+            newRow.insertCell(0).textContent = service.name;
+            newRow.insertCell(1).textContent = service.details;
+            newRow.insertCell(2).textContent = service.price;
+            newRow.insertCell(3).innerHTML = '<a class="join-now-btn">Join Now</a>';
+          });
+        }
+
+        // Function to save table data to localStorage
+        function saveTableData(services) {
+          localStorage.setItem("servicesList", JSON.stringify(services));
+        }
+
+        // Event listener to add a new item
+        document.getElementById("addItemButton").addEventListener("click", function () {
+          const service = prompt("Enter the Service Name:");
+          const details = prompt("Enter the Details:");
+          const price = prompt("Enter the Price:");
+
+          if (service && details && price) {
+            const table = document.getElementById("servicesTable").getElementsByTagName("tbody")[0];
+            const newRow = table.insertRow();
+            newRow.insertCell(0).textContent = service;
+            newRow.insertCell(1).textContent = details;
+            newRow.insertCell(2).textContent = price;
+            newRow.insertCell(3).innerHTML = '<a class="join-now-btn">Join Now</a>';
+
+            // Update localStorage
+            const services = JSON.parse(localStorage.getItem("servicesList")) || [];
+            services.push({ name: service, details: details, price: price });
+            saveTableData(services);
+          } else {
+            alert("All fields are required!");
+          }
+        });
+
+        // Event listener to remove the last item
+        document.getElementById("removeItemButton").addEventListener("click", function () {
+          const table = document.getElementById("servicesTable").getElementsByTagName("tbody")[0];
+          const rowCount = table.rows.length;
+
+          if (rowCount > 0) {
+            table.deleteRow(rowCount - 1);
+
+            // Update localStorage
+            const services = JSON.parse(localStorage.getItem("servicesList")) || [];
+            services.pop();
+            saveTableData(services);
+          } else {
+            alert("No more items to remove!");
+          }
+        });
+      </script>
+    </section>
+  </main>
+
   <footer class="footer">
     <div class="footer-container">
-        <div class="footer-section">
-            <h3>About Us</h3>
-            <p>We are committed to providing the best fitness training services to help you achieve your goals.</p>
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>We are committed to providing the best fitness training services to help you achieve your goals.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: Triathlon@fitnessstudio.com</p>
+        <p>Phone: 051-7654321</p>
+        <p>Address: Apartment basement, Multan Cantt</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">Trainers</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         </div>
-        <div class="footer-section">
-            <h3>Contact Us</h3>
-            <p>Email: Triathlon@fitnessstudio.com</p>
-            <p>Phone: 051-7654321</p>
-            <p>Address: Apartment basement, Multan Cantt</p>
-        </div>
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">Trainers</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-section" >
-            <h3>Follow Us</h3>
-            <div class="social-icons" >
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
+      </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2024 Fitness Studio. All Rights Reserved.</p>
+      <p>&copy; 2024 Fitness Studio. All Rights Reserved.</p>
     </div>
   </footer>
-  </body>
-</html>
+  <script src="script.js"></script>
 
+</body>
+</html>
