@@ -230,3 +230,44 @@ document
       alert("No rows available to remove!");
     }
   });
+
+  function validateForm() {
+    // Clear all previous error messages
+    document.getElementById("nameError").innerText = "";
+    document.getElementById("emailError").innerText = "";
+    document.getElementById("phoneError").innerText = "";
+    document.getElementById("successMessage").innerText = "";
+  
+    // Get form values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+  
+    let isValid = true;
+  
+    // Validate name
+    if (name === "") {
+      document.getElementById("nameError").innerText = "Name must not be empty.";
+      isValid = false;
+    }
+  
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      document.getElementById("emailError").innerText = "Please enter a valid email address.";
+      isValid = false;
+    }
+  
+    // Validate phone
+    const phoneRegex = /^\d+$/;
+    if (!phoneRegex.test(phone) || phone.length < 11) {
+      document.getElementById('phoneError').textContent = 'Phone number must contain at least 11 digits and only digits.';
+      isValid = false;
+    }
+  
+    // Display success message if all fields are valid
+    if (isValid) {
+      document.getElementById("successMessage").innerText = "Form submitted successfully!";
+    }
+  }
+  
