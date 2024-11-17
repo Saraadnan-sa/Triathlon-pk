@@ -55,6 +55,31 @@ header .navbar {
 .logo img {
   width: 80px;
 }
+/* buttons under navbar */
+.button-container {
+  display: flex;
+  justify-content: center; /* Align buttons horizontally */
+  align-items: center;    /* Align buttons vertically */
+  gap: 5px;              /* Space between buttons */
+  background-color: var(--primary-color);
+}
+
+.Theme-btn{
+  display: block;          /* Ensures the button is displayed */
+  margin: 5px;        /* Adds space above the button */
+  padding: 10px 20px;      /* Adds padding for visibility */
+  background-color: var(--button-color); /* A visible background color */
+  color: white;            /* Text color */
+  border: none;            /* Removes border */
+  cursor: pointer;         /* Changes cursor to pointer on hover */
+  font-size: 16px;         /* Increases font size */
+  border-radius: 5px;      /* Rounds button corners */
+  position: relative;
+  z-index: 3;
+}
+.Theme-btn:hover {
+  background-color: var(--hover-color); /* Darkens background on hover */
+}
 
 /* Main/Hero Section */
 main {
