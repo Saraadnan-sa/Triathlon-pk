@@ -972,7 +972,7 @@ textarea {
 
 /* Blog content */
 .blog-content {
-  background-color: #e7f9fc; /* Light blue background */
+  background-color: var(--background-color); /* Light blue background */
   padding: 50px 0;
 }
 
