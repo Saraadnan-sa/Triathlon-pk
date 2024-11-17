@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       image.style.transition = "transform 0.3s ease"; // Add a smooth transition
       image.style.boxShadow = "0px 4px 15px rgba(0, 0, 0, 0.3)"; // Add a shadow
     });
-
+ 
     // Remove hover (mouseleave) effect
     image.addEventListener("mouseleave", () => {
       image.style.transform = "scale(1)"; // Reset to original scale
