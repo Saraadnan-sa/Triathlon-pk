@@ -293,6 +293,10 @@ th {
   z-index: 3;
 }
 
+#removeItemButton:hover {
+  background-color: var(--hover-color); /* Darkens background on hover */
+}
+
 /* Join Now Button */
 .join-now-btn {
   display: inline-block;

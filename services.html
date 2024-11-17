@@ -21,7 +21,7 @@
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="blog.html">Blogs</a></li>
-        <li><a href="#" id="toggleTheme" onclick="toggleTheme()">Switch to Red Theme</a></li>
+        <li><a href="#" id="toggleTheme" onclick="toggleTheme()">Change Theme</a></li>
       </ul>
     </div>
   </header>
@@ -43,8 +43,8 @@
             <th>Sign Up</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
+        <tbody id="servicesTableBody">
+          <tr class="default-row">
             <td>Boot Camp Fitness</td>
             <td>
               High-intensity group fitness classes designed to build strength
@@ -53,7 +53,7 @@
             <td>PKR 5,000/month</td>
             <td><a href="home.html" class="join-now-btn">Join Now</a></td>
           </tr>
-          <tr>
+          <tr class="default-row">
             <td>Personal Training</td>
             <td>
               One-on-one training with a certified trainer, tailored to your
@@ -62,7 +62,7 @@
             <td>PKR 7,000/month</td>
             <td><a href="home.html" class="join-now-btn">Join Now</a></td>
           </tr>
-          <tr>
+          <tr class="default-row">
             <td>Sports Training</td>
             <td>
               Specialized training programs for cycling, running, and
@@ -71,7 +71,7 @@
             <td>PKR 6,500/month</td>
             <td><a href="home.html" class="join-now-btn">Join Now</a></td>
           </tr>
-          <tr>
+          <tr class="default-row">
             <td>Weight Training Sessions</td>
             <td>
               Focused sessions using the weight training area (bench press,
@@ -81,7 +81,7 @@
             <td>PKR 6,000/month</td>
             <td><a href="home.html" class="join-now-btn">Join Now</a></td>
           </tr>
-          <tr>
+          <tr class="default-row">
             <td>Yoga and Pilates Classes</td>
             <td>
               Relaxation and core strengthening sessions with professional
@@ -90,7 +90,7 @@
             <td>PKR 9,000/month</td>
             <td><a href="home.html" class="join-now-btn">Join Now</a></td>
           </tr>
-          <tr>
+          <tr class="default-row">
             <td>Endless Pool Training</td>
             <td>
               Swim training using the endless pool, ideal for triathletes or
@@ -99,7 +99,7 @@
             <td>PKR 6,500/month</td>
             <td><a href="home.html" class="join-now-btn">Join Now</a></td>
           </tr>
-          <tr>
+          <tr class="default-row">
             <td>Competition Preparation & Results Tracking</td>
             <td>
               Support for athletes preparing for events, and tools to track
@@ -108,7 +108,7 @@
             <td>PKR 10,000/month</td>
             <td><a href="home.html" class="join-now-btn">Join Now</a></td>
           </tr>
-          <tr>
+          <tr class="default-row">
             <td>Health and Wellness Counseling</td>
             <td>
               Guidance on health, nutrition, and wellness, to support overall
@@ -125,70 +125,8 @@
       <button id="addItemButton">Add New Item</button>
       <button id="removeItemButton">Remove Last Item</button>
 
-      <script>
-        // Load table data from localStorage on page load
-        document.addEventListener("DOMContentLoaded", function () {
-          loadTableData();
-        });
+      <script src="script.js">
 
-        // Function to load table data from localStorage
-        function loadTableData() {
-          const table = document.getElementById("servicesTable").getElementsByTagName("tbody")[0];
-          const services = JSON.parse(localStorage.getItem("servicesList")) || [];
-
-          services.forEach(service => {
-            const newRow = table.insertRow();
-            newRow.insertCell(0).textContent = service.name;
-            newRow.insertCell(1).textContent = service.details;
-            newRow.insertCell(2).textContent = service.price;
-            newRow.insertCell(3).innerHTML = '<a class="join-now-btn">Join Now</a>';
-          });
-        }
-
-        // Function to save table data to localStorage
-        function saveTableData(services) {
-          localStorage.setItem("servicesList", JSON.stringify(services));
-        }
-
-        // Event listener to add a new item
-        document.getElementById("addItemButton").addEventListener("click", function () {
-          const service = prompt("Enter the Service Name:");
-          const details = prompt("Enter the Details:");
-          const price = prompt("Enter the Price:");
-
-          if (service && details && price) {
-            const table = document.getElementById("servicesTable").getElementsByTagName("tbody")[0];
-            const newRow = table.insertRow();
-            newRow.insertCell(0).textContent = service;
-            newRow.insertCell(1).textContent = details;
-            newRow.insertCell(2).textContent = price;
-            newRow.insertCell(3).innerHTML = '<a class="join-now-btn">Join Now</a>';
-
-            // Update localStorage
-            const services = JSON.parse(localStorage.getItem("servicesList")) || [];
-            services.push({ name: service, details: details, price: price });
-            saveTableData(services);
-          } else {
-            alert("All fields are required!");
-          }
-        });
-
-        // Event listener to remove the last item
-        document.getElementById("removeItemButton").addEventListener("click", function () {
-          const table = document.getElementById("servicesTable").getElementsByTagName("tbody")[0];
-          const rowCount = table.rows.length;
-
-          if (rowCount > 0) {
-            table.deleteRow(rowCount - 1);
-
-            // Update localStorage
-            const services = JSON.parse(localStorage.getItem("servicesList")) || [];
-            services.pop();
-            saveTableData(services);
-          } else {
-            alert("No more items to remove!");
-          }
-        });
       </script>
     </section>
   </main>
