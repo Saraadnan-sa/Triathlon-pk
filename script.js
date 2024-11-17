@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all the images you want to add hover effects to
+  const images = document.querySelectorAll(".card-img, .event-image, .trainer-img img");
+
+  images.forEach((image) => {
+    // Add hover (mouseenter) effect
+    image.addEventListener("mouseenter", () => {
+      image.style.transform = "scale(1.1)"; // Scale up the image
+      image.style.transition = "transform 0.3s ease"; // Add a smooth transition
+      image.style.boxShadow = "0px 4px 15px rgba(0, 0, 0, 0.3)"; // Add a shadow
+    });
+
+    // Remove hover (mouseleave) effect
+    image.addEventListener("mouseleave", () => {
+      image.style.transform = "scale(1)"; // Reset to original scale
+      image.style.boxShadow = "none"; // Remove shadow
+});
+});
+});
+
 function toggleDetails(extraId, button) {
   const extraDetails = document.getElementById(extraId);
   const icon = button.querySelector("i"); // Get the icon inside the button
