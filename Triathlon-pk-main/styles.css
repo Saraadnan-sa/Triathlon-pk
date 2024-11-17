@@ -1,0 +1,1224 @@
+:root {
+  --primary-color: #2D2155;
+  --white-color: white;
+  --button-color: #6D40E4;
+  --hover-color: #3d2482;
+  --background-color: #e0f7fa;
+  --footer-color: #2c3e50;
+  --table-header:#b3e5fc;
+  --font-family: 'Arial', sans-serif;
+  --font-size: 16px;
+  --text-color: #000;
+}
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:  var(--font-family);
+  font-size: var(--font-size);
+  line-height: 1.6;
+  background-color: var(--background-color);
+  /* Light blue */
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: var(--button-color);
+  color: var(--white-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+a {
+  color: var(--text-color);
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+footer {
+  background-color: var(--footer-color);
+  color: var(--white-color);
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background-color: var(--table-header);
+}
+
+/* Header/Navbar */
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: var(--primary-color);
+  /* Using primary color */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--white-color);
+  /* Using white color for text */
+  font-weight: bold;
+}
+
+.logo img {
+  width: 80px;
+}
+/* buttons under navbar */
+.button-container {
+  display: flex;
+  justify-content: center; /* Align buttons horizontally */
+  align-items: center;    /* Align buttons vertically */
+  gap: 5px;              /* Space between buttons */
+  background-color: var(--primary-color);
+}
+
+/* Base styles for buttons */
+.style-btn, .Theme-btn {
+  background-color: var(--button-color); /* Use theme variable */
+  color: var(--white-color);            /* Use theme variable */
+  padding: 12px 24px;                   /* Padding for a larger button */
+  font-size: var(--font-size);          /* Use theme font size */
+  border: none;                         /* Remove the border */
+  border-radius: 8px;                   /* Rounded corners */
+  cursor: pointer;                      /* Make the button look clickable */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect for buttons */
+.style-btn:hover, .Theme-btn:hover {
+  background-color: var(--hover-color); /* Use theme variable */
+}
+
+/* Focus state for accessibility */
+.style-btn:focus, .Theme-btn:focus {
+  outline: none; /* Remove focus outline */
+}
+
+/* Disabled state for buttons */
+.style-btn:disabled, .Theme-btn:disabled {
+  background-color: #ccc; /* Gray background for disabled button */
+  cursor: not-allowed;    /* Indicate the button is not clickable */
+}
+
+
+
+.Theme-btn{
+  display: block;          /* Ensures the button is displayed */
+  margin: 5px;        /* Adds space above the button */
+  padding: 10px 20px;      /* Adds padding for visibility */
+  background-color: var(--button-color); /* A visible background color */
+  color: white;            /* Text color */
+  border: none;            /* Removes border */
+  cursor: pointer;         /* Changes cursor to pointer on hover */
+  font-size: 16px;         /* Increases font size */
+  border-radius: 5px;      /* Rounds button corners */
+  position: relative;
+  z-index: 3;
+}
+.Theme-btn:hover {
+  background-color: var(--hover-color); /* Darkens background on hover */
+}
+
+/* Main/Hero Section */
+main {
+  flex: 1;
+}
+
+main .hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('./images/home_page_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* To add opacity */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content .homepage-btn {
+  padding: 10px 20px;
+  background-color: var(--button-color);
+  /* Using primary color */
+  color: var(--white-color);
+  /* Text color for buttons */
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.hero-content .homepage-btn:hover {
+  background-color: var(--hover-color);
+  /* Using hover color for button on hover */
+  transition-duration: 0.3s;
+}
+
+
+/* Footer Styles */
+.footer {
+  background-color: var(--footer-color); /* Dark background */
+  color: #ecf0f1; /* Light text color */
+  padding: 40px 20px; /* Padding for the footer */
+  font-family: 'Arial', sans-serif; /* Font family */
+}
+
+.footer-container {
+  display: flex; /* Flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: space-between; /* Space between sections */
+}
+
+.footer-section {
+  flex: 1; /* Equal flex for each section */
+  margin: 10px; /* Margin around each section */
+  min-width: 200px; /* Minimum width for responsiveness */
+}
+
+.footer-section h3 {
+  color: #e74c3c; /* Heading color */
+  margin-bottom: 10px; /* Space below headings */
+}
+
+.footer-section p {
+  margin: 5px 0; /* Margin for paragraphs */
+}
+
+.footer-section ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+.footer-section ul li {
+  margin: 5px 0; /* Space between list items */
+}
+
+.footer-section ul li a {
+  color: #ecf0f1; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.social-icons {
+  display: flex; /* Flexbox for social icons */
+}
+
+.social-icons a {
+  margin: 0 10px; /* Margin between icons */
+}
+
+.social-icons img {
+  width: 30px; /* Icon width */
+  height: 30px; /* Icon height */
+}
+
+.footer-bottom {
+  text-align: center; /* Center text */
+  margin-top: 20px; /* Space above the copyright text */
+  font-size: 14px; /* Font size for copyright */
+}
+
+.social-icons {
+  display: flex; /* Flexbox for social icons */
+}
+
+.social-icons a {
+  margin: 0 10px; /* Margin between icons */
+  color: #ecf0f1; /* Icon color */
+  font-size: 24px; /* Font size for icons */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Transition effect on hover */
+}
+
+.social-icons a:hover {
+  color: #e74c3c; /* Change color on hover */
+}
+
+/* services page --> Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+th {
+  background: var(--table-header);
+  /* Light blue */
+  color: var(--hover-color);
+  /* Dark blue */
+}
+
+/* Services Section */
+.services {
+  position: relative;
+  padding: 20px;
+  color: white;
+
+}
+
+ .services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./images/service1.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.services::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+} 
+
+.services h1,
+.services p,
+.services table,
+.services h2
+{
+  position: relative;
+  z-index: 3;
+  color: #fffdfd;
+}
+
+
+#addItemButton {
+  display: block;          /* Ensures the button is displayed */
+  margin-top: 20px;        /* Adds space above the button */
+  padding: 10px 20px;      /* Adds padding for visibility */
+  background-color: var(--button-color); /* A visible background color */
+  color: white;            /* Text color */
+  border: none;            /* Removes border */
+  cursor: pointer;         /* Changes cursor to pointer on hover */
+  font-size: 16px;         /* Increases font size */
+  border-radius: 5px;      /* Rounds button corners */
+  position: relative;
+  z-index: 3;
+}
+
+#addItemButton:hover {
+  background-color: var(--hover-color); /* Darkens background on hover */
+}
+
+#removeItemButton{
+  display: block;          /* Ensures the button is displayed */
+  margin-top: 20px;        /* Adds space above the button */
+  padding: 10px 20px;      /* Adds padding for visibility */
+  background-color: var(--button-color); /* A visible background color */
+  color: white;            /* Text color */
+  border: none;            /* Removes border */
+  cursor: pointer;         /* Changes cursor to pointer on hover */
+  font-size: 16px;         /* Increases font size */
+  border-radius: 5px;      /* Rounds button corners */
+  position: relative;
+  z-index: 3;
+}
+
+#removeItemButton:hover {
+  background-color: var(--hover-color); /* Darkens background on hover */
+}
+
+/* Join Now Button */
+.join-now-btn {
+  display: inline-block;
+  padding: 2px 4px;
+  background-color: var(--button-color);
+  /* Using primary color */
+  color: var(--white-color);
+  /* White text */
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid var(--button-color);
+  /* Dark blue border */
+  text-align: center;
+}
+
+.join-now-btn:hover {
+  background-color: var(--hover-color);
+  /* Hover color */
+  transition-duration: 0.3s;
+  border: 2px solid var(--hover-color);
+
+}
+
+/* Contact.html */
+main .contact {
+  position: relative;
+  height: 100vh;
+  background-image: url('./images/home_page_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+/* Overlay for the contact section */
+.contact-overlay {
+  position: absolute; /* Position overlay absolutely */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+ 
+  /* backdrop-filter: blur(10px); Apply blur effect */
+  padding: 10px; /* Add padding around the overlay */
+  display: flex; /* Flexbox to arrange items */
+  flex-direction: column; /* Vertical layout */
+  align-items: center; /* Center align items */
+  justify-content: flex-start; /* Align items at the start */
+}
+
+/* Main flex container for contact items */
+.flex-main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px; /* Limit maximum width */
+  margin-top: 20px; /* Space above the flex items */
+  gap: 10px; /* Add gap between items */
+}
+
+/* Vertical items */
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Allow vertical items to take up available space */
+  padding: 10px; /* Padding within each vertical item */
+  /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Item heights */
+.item1 {
+  flex: 0 0 20%; /* Take 20% of the height */
+  font-size: xx-large;
+  text-align: center;
+  padding-top: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5); 
+  margin-bottom: 10px;
+
+}
+
+.item2, .item3 {
+  flex: 1; /* Take the remaining height */
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+/* Item for contact information */
+.item4 {
+  flex: 0 0 20%; /* Take 20% of the height */
+  margin-top: 3%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  border-radius: 10px;
+  padding-top: 15px;
+}
+
+#gmap_canvas{
+  width:100%; 
+  height:100%;
+  padding: 5%;
+
+}
+
+/* Form styling */
+.contact-form {
+  padding: 20px; /* Padding for the contact form */
+}
+
+/* Map canvas styling */
+.gmap_canvas {
+  height: 100%; /* Make the map canvas take full height of its parent */
+  width: 100%; /* Make the map canvas take full width of its parent */
+  border-radius: 8px; /* Round corners for the map */
+}
+
+/* Styling for contact information below the map */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* Space between items */
+}
+
+.contact-item i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+/* Contact Form */
+form {
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--button-color);
+  /* Input border */
+}
+
+.contact-options {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.632);
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+}
+
+.contact-item {
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-item i {
+  margin-right: 8px;
+}
+
+/* Submit Button */
+.submit-btn {
+  padding: 10px 20px;
+  background-color: var(--button-color);
+  /* Primary color */
+  color: var(--white-color);
+  /* White text */
+  border: 2px solid var(--button-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.submit-btn:hover {
+  background-color: var(--hover-color);
+  /* Hover color */
+  transition-duration: 0.3s;
+  border: 2px solid var(--hover-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    padding: 20px;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 0.9em;
+  }
+}
+
+/*About Us Page*/
+.about-simple{
+  max-width: 800px; /* Maximum width of the container */
+  margin: 20px auto; /* Center the container with vertical margins */
+  padding: 20px; /* Padding inside the container */
+  background-color: var(--hover-color);  /* Semi-transparent white background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Center the text */
+  color: var(--background-color);
+}
+
+.about-simple h1{
+  font-size: 2.5rem; /* Font size for the title */
+    margin-bottom: 15px; /* Space below the title */
+    color: var(--background-color);; /* Dark text color */
+}
+/* Card section */
+.card-section {
+  background-color: var(--hover-color);
+  padding: 40px;
+}
+.previous-events h2, .card-section h1{
+  font-size: 2.5rem; /* Font size for the title */
+  margin-bottom: 15px; /* Space below the title */
+  color: var(--background-color);; /* Dark text color */
+  text-align: center;
+}
+/* Card Container */
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card Styles */
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: calc(33.333% - 20px); /* 3 cards per row with space between */
+  max-width: 100%;
+  text-align: center;
+  
+}
+
+/* .card:hover {
+  transform: scale(1.05);
+} */
+
+.card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 25px;
+}
+
+.card-content h3 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.card-content p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .card {
+      width: calc(50% - 20px); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+      width: 100%; /* Cards stacked vertically on small screens */
+  }
+
+  .card-container {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
+.pool-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #111;
+  /* Dark background for the pool section */
+}
+
+.pool-content {
+  max-width: 50%;
+}
+
+.pool-content h2 {
+  font-size: 2.1rem;
+  color: #f9c74f;
+  margin-bottom: 20px;
+}
+
+.pool-content p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.pool-image img {
+  max-width: 70%;
+  border-radius: 20px;
+  margin-left: 200px;
+}
+/* History section */
+.history h2{
+  font-size: 2.5rem; /* Font size for the title */
+  margin-bottom: 15px; /* Space below the title */
+  color: var(--hover-color); /* Dark text color */
+  text-align: center;
+}
+.our-history,
+.big-events,
+.trainer-spotlight {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+  /* Light background for contrast */
+
+}
+
+
+.history-content,
+.trainer-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.history,
+.trainer {
+  padding: 20px;
+  margin: 20px 0;
+}
+/* .trainer-img {
+ 
+} */
+.trainer-img img {
+  width: 100%;           
+  height: auto;         
+  object-fit: cover;     
+  object-position: top;  
+}
+
+
+.history-text,
+.trainer-info {
+  padding: 10px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.previous-events {
+  padding: 50px 0;
+  background-color: var(--hover-color);
+  /* Light background for contrast */
+}
+
+
+/* FAQ Section Styles */
+/* FAQ Section Styles */
+.faq {
+  background-color: #242424;
+  color: #ffffff;
+  padding: 50px 20px;
+  border-radius: 5px;
+  margin: 0px 0;
+}
+.faq h1{
+  text-align: center;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: #242424;
+}
+
+.events-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.event-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  /* Width of each card */
+  margin: 20px;
+  /* Spacing between cards */
+  padding: 20px;
+  text-align: center;
+}
+
+.event-image {
+  width: 100%;
+  height: 150px;
+  /* Fixed height for images */
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  /* Rounded top corners */
+}
+
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.events-list {
+  list-style: none;
+  padding: 0;
+}
+
+.events-list li {
+  margin-bottom: 20px;
+  /* Space between events */
+  border: bottom 20px;
+}
+
+/* Event Page Styles */
+.events {
+  padding: 40px;
+  background-color: #f1f1f1;
+  /* Dark background */
+  color: #cf0000;
+}
+
+.events-container {
+  max-width: auto;
+  margin: 0 auto;
+  padding: auto;
+  background-color: var(--hover-color);
+
+}
+
+.event .section-title {
+  background-color: var(--table-header);
+}
+
+.events h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f9c74f;
+}
+
+.events h2 {
+  font-size: 1.8rem;
+  margin-top: 30px;
+  color: #f9c74f;
+  margin-left: 15px;
+}
+
+.events p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding: 10px;
+  color: #ddd;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Event Table Styles */
+.event-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.event-table thead {
+  background-color: #333;
+}
+
+.event-table th,
+.event-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  color: #ddd;
+}
+
+.event-table th {
+  font-weight: bold;
+  color: #f9c74f;
+  /* Header text color */
+}
+
+.event-table tbody tr:nth-child(even) {
+  background-color: #222;
+}
+
+.event-table tbody tr:hover {
+  background-color: #444;
+}
+
+/* Trainer Intro Section */
+/* Trainer Intro Section */
+.trainer h1 {
+  font-size: 2.5rem; /* Font size for the title */
+  margin-bottom: 15px; /* Space below the title */
+  color: var(--hover-color); /* Dark text color */
+  text-align: center; 
+}
+
+.trainer {
+  padding: 20px; /* Add padding around the section */
+  text-align: center; /* Center align text */
+}
+
+.trainer-container {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping to the next line */
+  justify-content: space-around; /* Space out the cards */
+}
+
+.trainer-card {
+  background-color: #f9f9f9; /* Light background for cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  margin: 15px; /* Space between cards */
+  padding: 20px; /* Padding inside the card */
+  width: 300px; /* Fixed width for cards */
+}
+
+.trainer-img img {
+  width: 100%; /* Make image responsive */
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensure image covers the area */
+  border-radius: 10px; /* Match the card corners */
+}
+
+.section-title {
+  margin: 15px 0; /* Space above and below titles */
+  font-size: 1.5em; /* Title font size */
+  color: #333; /* Title color */
+}
+
+.trainer-card p {
+  color: #555; /* Description color */
+  line-height: 1.6; /* Space out lines for readability */
+}
+.details-btn{
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 15px;
+}
+.details-btn:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .trainer-container {
+    flex-direction: column;
+    padding: 20px;
+    /* Reduce padding on smaller screens */
+  }
+
+  .trainer-img img {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .trainer-info {
+    text-align: center;
+  }
+}
+
+.about-info{
+  /* max-width: 800px;  */
+  margin: 20px auto; 
+  padding: 20px; 
+  background-color: var(--hover-color);  
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); 
+  text-align: center; 
+  color: var(--background-color);
+}
+
+/* Reuse styles from the About page */
+
+/* Header */
+/* .navbar {
+  background-color: #2b0a4b;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  color: #ffcd00;
+} */
+
+/* Hero section */
+.about-hero {
+  background-color: var(--primary-color); /* Purple background */
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+}
+
+.about-hero .hero-text {
+  background-color: var(--hover-color); /* Slightly darker purple card */
+  padding: 20px;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+}
+
+/* Blog content */
+.blog-content {
+  background-color: var(--background-color); /* Light blue background */
+  padding: 50px 0;
+}
+
+.blog-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.blog-card {
+  background-color: var(--hover-color); /* Same purple as the About page cards */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.blog-card h2 {
+  margin: 15px 0;
+  font-size: 1.8rem;
+}
+
+.blog-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.blog-card a {
+  color: #ffcd00;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.blog-card a:hover {
+  text-decoration: underline;
+}
+
+
+/* Blog content */
+.blog-card {
+  background-color: var(--hover-color); /* Same purple as the About page cards */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.blog-card h2 {
+  margin: 15px 0;
+  font-size: 1.8rem;
+}
+
+.blog-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.blog-card a {
+  color: #ffcd00;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.blog-card a:hover {
+  text-decoration: underline;
+}
+
+/* Hover effect for the cards */
+.blog-card:hover {
+  transform: translateY(-10px); /* Slightly lifts the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhances the shadow */
+}
+/* Comment Section */
+#comment-section {
+  background-image: url('images/service1.jpg'); /* Path to your background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  padding: 40px 20px;
+  margin-top: 50px;
+  border-radius: 8px;
+  color: white; /* Change text color to improve readability on a background image */
+  position: relative; /* Positioning context for the overlay */
+}
+
+#comment-section h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+}
+
+.comment-container {
+  max-width: 600px;
+  margin: 0 auto; /* Center the comment container */
+  background: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+  padding: 20px; /* Padding for the inner container */
+  border-radius: 8px; /* Round the corners of the inner container */
+}
+
+.comment-item {
+  margin-bottom: 20px;
+}
+
+.comment-label {
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.comment-input,
+.comment-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.comment-input:focus,
+.comment-textarea:focus {
+  border-color: var(--hover-color);
+  outline: none;
+}
+
+.comment-textarea {
+  resize: vertical; /* Allow vertical resizing */
+  height: 100px; /* Set a default height */
+}
+
+.comment-button {
+  background-color: var(--hover-color);
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-button:hover {
+  background-color: #4a1494;
+}
+
